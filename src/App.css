@@ -24,6 +24,20 @@
   color: white;
 }
 
+.NavBar{
+  width: 100%;
+  background-color: rgb(88, 216, 216);
+}
+
+.ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.li{
+  margin-right: 50px;
+}
+
 .App-link {
   color: #61dafb;
 }

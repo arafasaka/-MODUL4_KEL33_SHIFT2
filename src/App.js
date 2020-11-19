@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Counter from './learn-useState/Counter';
+import Effect from './learn-useEffect/Index';
+import Context from './learn-useContext/Index';
+import ReduceAndRef from './learn-useReducerRef/Index';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <div className="App-header">
+      <nav className="NavBar">
+        <ul className="ul">
+          <li className="li">
+            <Link to="/" >Use State</Link>
+          </li>
+          <li className='li'>
+            <Link to="/effect">Use Effect</Link>
+          </li>
+          <li className='li'>
+            <Link to="/context">Use Context</Link>
+          </li>
+          <li className='li'>
+            <Link to="/ReduceAndRef">Reduce And Ref</Link>
+          </li>
+        </ul>
+      </nav>
+      <Switch>
+        <Route path="/" exact component={Counter}/>
+        <Route path="/effect" exact component={Effect}/>
+        <Route path="/context" exact component={Context}/>
+        <Route path="/ReduceAndRef" exact component={ReduceAndRef}/>
+      </Switch>
+      </div>
+    </Router>
+
   );
 }
 
