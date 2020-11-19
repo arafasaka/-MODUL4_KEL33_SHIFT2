@@ -67,7 +67,7 @@ export default function TodosApp() {
   return (
       <div className="Main">
     <Context.Provider value={dispatch}>
-      <h1>Tugas Modul 4 Kel 33</h1>
+      <h1>Tugas Modul 4 Kelompok 33</h1>
       <button className="Button" onClick={() => dispatch({ type: 'add' })}>Buat Daftar Belanjaan Baru</button>
       <br />
       <br />
